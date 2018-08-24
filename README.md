@@ -17,11 +17,7 @@ This application allows users to order a custom pizza and receive a price based 
   * Example Input: size: small // size: medium // size: large
   * Example Output: $10 // $12 // $14
 
-* This program will allow users to select up to six toppings.
-  * Example Input: small pizza with 4 toppings // medium pizza with 6 toppings
-  * Example Output: $10 // $12
-
-* This program will allow users to select up to six toppings and receive a custom price.
+* This program will allow users to select up to six toppings and receive a custom price based on size and toppings.
   * Example Input: small pizza with 4 toppings // medium pizza with 6 toppings
   * Example Output: $14 // $18
 

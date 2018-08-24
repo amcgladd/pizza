@@ -11,21 +11,9 @@ Pizza.prototype.price = function() {
     } else if (this.size === "Large") {
       runningPrice += 4;
     }
+    runningPrice += this.toppings.length;
     return runningPrice;
 }
-
-// Pizza.protoype.price = function() {
-//   var runningPrice = 10;
-//   if(this.size === "Medium") {
-//     runningPrice += 2;
-//   } else if (this.size === "Large") {
-//     runningPrice +=4;
-//   }
-//   if(this.toppings.length > 0) {
-//     runningPrice += this.toppings.length;
-//   }
-//   return runningPrice;
-// }
 
 //user interface logic
 $(document).ready(function() {
