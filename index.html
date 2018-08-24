@@ -13,15 +13,12 @@
   <div class="container">
     <h1 class="text-danger">Pizza Order</h1>
     <form id="userInput">
-
       <!--Size Input-->
       <div class="form-group">
         <div class="row">
-
           <div class="col-md-2">
             <label class="text-danger  question-header" for="size">Size:</label>
           </div>
-
           <div class="col-md-4">
             <div class="form-check">
               <input class="form-check-input" type="radio" name="sizeRadios" id="sizeSmall" value="Small" checked>
@@ -51,8 +48,6 @@
             <label class="text-danger question-header" for="toppings">Toppings</label>
           </div>
           <div class="col-md-4">
-
-
             <div class="form-check">
               <input class="form-check-input" type="checkbox" value="Pepperoni" id="pepperoniTopping">
               <label class="form-check-label" for="pepperoniTopping">
@@ -92,12 +87,10 @@
           </div>
         </div>
       </div>
-
       <button class="btn btn-outline-danger" type="submit" name="button">Submit</button>
-
     </form>
-    <div id="price">
-      <p>Price will appear here</p>
+    <div id="output">
+      <h1>Your <span class="sizeOutput"></span>pizza will be a total of $<span class="priceOutput"></span></h1>
     </div>
   </div>
 </body>
