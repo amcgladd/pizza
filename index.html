@@ -11,12 +11,12 @@
 </head>
 <body>
   <div class="container">
-    <h1>Pizza Order</h1>
+    <h1 class="text-danger">Pizza Order</h1>
     <form id="userInput">
 
       <!--Size Input-->
       <div class="form-group">
-        <label for="size">Size:</label>
+        <label class="text-danger  question-header" for="size">Size:</label>
         <div class="form-check">
           <input class="form-check-input" type="radio" name="sizeRadios" id="sizeSmall" value="Small" checked>
           <label class="form-check-label" for="sizeSmall">
@@ -39,7 +39,7 @@
 
       <!--Toppings Input-->
       <div class="form-group">
-        <label for="toppings">Toppings</label>
+        <label class="text-danger question-header" for="toppings">Toppings</label>
         <div class="form-check">
           <input class="form-check-input" type="checkbox" value="Pepperoni" id="pepperoniTopping">
           <label class="form-check-label" for="pepperoniTopping">
@@ -78,7 +78,7 @@
         </div>
       </div>
 
-      <button class="btn" type="submit" name="button">Submit</button>
+      <button class="btn btn-outline-danger" type="submit" name="button">Submit</button>
 
     </form>
     <div id="price">

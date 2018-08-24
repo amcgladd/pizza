@@ -10,7 +10,6 @@ h1 {
   color: var(--primary-color);
 }
 
-.btn {
-  background-color: var(--primary-color);
-  outline-color: var(--primary-color);
+.question-header {
+  font-size: 20px;
 }
