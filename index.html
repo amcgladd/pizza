@@ -118,14 +118,22 @@
       </div>
       <div class="row">
         <div class="col-md-6">
-        <button class="btn btn-block btn-outline-danger" type="submit" name="button">Add Pizza</button>
+        <button class="btn btn-block btn-outline-danger" type="submit" id="add-button" name="button">Add Pizza</button>
         </div>
         <div class="col-md-6">
           <button class="btn btn-block btn-danger" type="submit" name="button">Checkout</button>
       </div>
     </div>
     </form>
-    <div id="output">
+    <div class="row">
+      <div class="col-md-2">
+        <h4 class="text-danger">Your cart</h4>
+      </div>
+      <div class="col-md-4">
+        <ul id="pizza-cart"></ul>
+      </div>
+    </div>
+    <!-- <div id="output">
       <div class="row">
         <div class="col-md-2">
           <h4 class="text-danger">Total:</h4>
@@ -138,7 +146,7 @@
           will be $<span class="priceOutput"></span>.</h2>
         </div>
       </div>
-    </div>
+    </div> -->
   </div>
 </body>
 </html>

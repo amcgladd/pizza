@@ -67,3 +67,7 @@ button {
 #output {
   text-align: center;
 }
+
+.cart-details {
+  display: none;
+}

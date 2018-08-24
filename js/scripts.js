@@ -16,9 +16,25 @@ Pizza.prototype.price = function() {
   return this.runningPrice;
 }
 
+
+Pizza.prototype.cartName = function() {
+  return this.size + " - $" + this.runningPrice;
+}
+
+
+// Pizza.prototype.cartName = function() {
+//   if (this.toppings.length > 0) {
+//
+//     return this.size + " pizza with " + this.toppings[0] + " - $" + this.runningPrice;
+//   } else {
+//     return this.size + " pizza - $" + this.runningPrice;
+//   }
+// }
+
+
 //user interface logic
 $(document).ready(function() {
-  $("#userInput").submit(function(event){
+  $("#add-button").click(function() {
     event.preventDefault();
 
     var inputtedSize = $("input:radio[name=sizeRadios]:checked").val();
@@ -52,7 +68,15 @@ $(document).ready(function() {
         }
       });
     }
+
+    $("ul#pizza-cart").append("<li><span class='cart-item'>" + newPizza.cartName() + "</span></li><div><h6 class='cart-details'>"+ newPizza.toppings +"</h6></div>");
+
     $(".pic-output").html(picOutput);
     $("#output").slideDown();
+
+
+     $(".cart-item").last().click(function() {
+       $(".cart-details").slideToggle();
+     });
   })
 })
