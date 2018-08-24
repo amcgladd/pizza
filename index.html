@@ -1,141 +1,144 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Pizza Order</title>
-    <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
-    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
-    <link href="css/styles.css" rel="stylesheet" type="text/css">
-    <script src="js/jquery-3.3.1.js"></script>
-    <script src="js/scripts.js"></script>
-  </head>
-  <body>
-    <div class="container">
-      <div id="heading">
-        <h1 class="text-danger" id="heading-text">Your Pizza</h1>
-      </div>
-      <form id="userInput">
-        <!--Size Input-->
-        <div class="form-group">
-          <div class="row">
-            <div class="col-md-2">
-              <label class="text-danger  question-header" for="size">Size:</label>
-            </div>
-            <div class="col-md-10">
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="sizeRadios" id="sizeSmall" value="Small" checked>
-                <label class="form-check-label" for="sizeSmall">
-                  <div>
-                    <img id="small-pic" src="img/pizza.png">
-                  </div>
-                  Small
-                </label>
-              </div>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="sizeRadios" id="sizeMedium" value="Medium">
-                <label class="form-check-label" for="sizeMedium">
-                  <div>
-                    <img id="medium-pic" src="img/pizza.png">
-                  </div>
-                  Medium
-                </label>
-              </div>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="sizeRadios" id="sizeLarge" value="Large">
-                <label class="form-check-label" for="sizeLarge">
-                  <img id="large-pic" src="img/pizza.png">
-                  <div>
-                    Large
-                  </div>
-                </label>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!--Toppings Input-->
-        <div class="form-group">
-          <div class="row">
-            <div class="col-md-2">
-              <label class="text-danger question-header" for="toppings">Toppings:</label>
-            </div>
-            <div class="col-md-10">
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" value="Pepper" id="pepperTopping">
-                <label class="form-check-label" for="pepperTopping">
-                  <img class="topping-pic" id="pepper-pic" src="img/pepper.png">
-                  <div>
-                    Pepper
-                  </div>
-                </label>
-              </div>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" value="Mushrooms" id="mushroomTopping">
-                <label class="form-check-label" for="mushroomTopping">
-                  <img class="topping-pic" id="mushroom-pic" src="img/mushroom.png">
-                  <div>
-                    Mushroom
-                  </div>
-                </label>
-              </div>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" value="Onions" id="onionsTopping">
-                <label class="form-check-label" for="onionsTopping">
-                  <img class="topping-pic" id="onion-pic" src="img/onion.png">
-                  <div>
-                    Onion
-                  </div>
-                </label>
-              </div>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" value="Sausage" id="sausageTopping">
-                <label class="form-check-label" for="sausageTopping">
-                  <img class="topping-pic" id="sausage-pic" src="img/sausage.png">
-                  <div>
-                    Sausage
-                  </div>
-                </label>
-              </div>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" value="Bacon" id="baconTopping">
-                <label class="form-check-label" for="baconTopping">
-                  <img class="topping-pic" id="bacon-pic" src="img/bacon.png">
-                  <div>
-                    Bacon
-                  </div>
-                </label>
-              </div>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" value="Extra Cheese" id="extraCheeseTopping">
-                <label class="form-check-label" for="extraCheeseTopping">
-                  <img class="topping-pic" id="cheese-pic" src="img/cheese.png">
-                  <div>
-                    Extra Cheese
-                  </div>
-                </label>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div>
-          <button class="btn btn-block btn-outline-danger" type="submit" name="button">Order</button>
-        </div>
-      </form>
-      <div id="output">
+<head>
+  <meta charset="utf-8">
+  <title>Pizza Order</title>
+  <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+  <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+  <link href="css/styles.css" rel="stylesheet" type="text/css">
+  <script src="js/jquery-3.3.1.js"></script>
+  <script src="js/scripts.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div id="heading">
+      <h1 class="text-danger" id="heading-text">Your Pizza</h1>
+    </div>
+    <form id="userInput">
+      <!--Size Input-->
+      <div class="form-group">
         <div class="row">
           <div class="col-md-2">
-            <h4 class="text-danger">Total:</h4>
+            <label class="text-danger  question-header" for="size">Size:</label>
           </div>
-          <div class="col-md-8">
-           <h2>Your <span class="sizeOutput"></span> pizza with
-             <div class="pic-output-holder">
-               <span class="pic-output"></span>
+          <div class="col-md-10">
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="sizeRadios" id="sizeSmall" value="Small" checked>
+              <label class="form-check-label" for="sizeSmall">
+                <div>
+                  <img id="small-pic" src="img/pizza.png">
+                </div>
+                Small
+              </label>
             </div>
-             will be $<span class="priceOutput"></span>.</h2>
-           <div class="row">
-
-         </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="sizeRadios" id="sizeMedium" value="Medium">
+              <label class="form-check-label" for="sizeMedium">
+                <div>
+                  <img id="medium-pic" src="img/pizza.png">
+                </div>
+                Medium
+              </label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="sizeRadios" id="sizeLarge" value="Large">
+              <label class="form-check-label" for="sizeLarge">
+                <img id="large-pic" src="img/pizza.png">
+                <div>
+                  Large
+                </div>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Toppings Input-->
+      <div class="form-group">
+        <div class="row">
+          <div class="col-md-2">
+            <label class="text-danger question-header" for="toppings">Toppings:</label>
+          </div>
+          <div class="col-md-10">
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" value="Pepper" id="pepperTopping">
+              <label class="form-check-label" for="pepperTopping">
+                <img class="topping-pic" id="pepper-pic" src="img/pepper.png">
+                <div>
+                  Pepper
+                </div>
+              </label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" value="Mushrooms" id="mushroomTopping">
+              <label class="form-check-label" for="mushroomTopping">
+                <img class="topping-pic" id="mushroom-pic" src="img/mushroom.png">
+                <div>
+                  Mushroom
+                </div>
+              </label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" value="Onions" id="onionsTopping">
+              <label class="form-check-label" for="onionsTopping">
+                <img class="topping-pic" id="onion-pic" src="img/onion.png">
+                <div>
+                  Onion
+                </div>
+              </label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" value="Sausage" id="sausageTopping">
+              <label class="form-check-label" for="sausageTopping">
+                <img class="topping-pic" id="sausage-pic" src="img/sausage.png">
+                <div>
+                  Sausage
+                </div>
+              </label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" value="Bacon" id="baconTopping">
+              <label class="form-check-label" for="baconTopping">
+                <img class="topping-pic" id="bacon-pic" src="img/bacon.png">
+                <div>
+                  Bacon
+                </div>
+              </label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" value="Extra Cheese" id="extraCheeseTopping">
+              <label class="form-check-label" for="extraCheeseTopping">
+                <img class="topping-pic" id="cheese-pic" src="img/cheese.png">
+                <div>
+                  Extra Cheese
+                </div>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+        <button class="btn btn-block btn-outline-danger" type="submit" name="button">Add Pizza</button>
+        </div>
+        <div class="col-md-6">
+          <button class="btn btn-block btn-danger" type="submit" name="button">Checkout</button>
+      </div>
+    </div>
+    </form>
+    <div id="output">
+      <div class="row">
+        <div class="col-md-2">
+          <h4 class="text-danger">Total:</h4>
+        </div>
+        <div class="col-md-8">
+          <h2>Your <span class="sizeOutput"></span> pizza with <br>
+            <div class="pic-output-holder">
+              <span class="pic-output"></span>
+            </div>
+          will be $<span class="priceOutput"></span>.</h2>
         </div>
       </div>
     </div>
-  </body>
+  </div>
+</body>
 </html>
