@@ -1,5 +1,23 @@
+:root {
+  --primary-color: #d9534f;
+}
+
 body {
   font-family: 'Muli', sans-serif;
+}
+
+.container {
+  padding-top: 100px;
+  padding-left: 50px;
+}
+
+#heading {
+  padding-bottom: 10px;
+
+}
+
+#heading-text {
+  /* border-bottom: 1px solid var(--primary-color); */
 }
 
 .question-header {
@@ -8,4 +26,33 @@ body {
 
 #output {
   display: none;
+  border-left: 1px solid var(--primary-color);
+}
+
+.form-group > .row {
+   border-left: 1px solid var(--primary-color);
+}
+
+#small-pic {
+  height: 80px;
+}
+
+#medium-pic {
+  height: 100px;
+}
+
+#large-pic {
+  height: 120px;
+}
+
+.topping-pic {
+  height: 50px;
+}
+
+label {
+  text-align: center;
+}
+
+form {
+  margin-bottom: 20px;
 }

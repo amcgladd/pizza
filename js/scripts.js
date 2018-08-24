@@ -31,6 +31,6 @@ $(document).ready(function() {
     var finalPrice = newPizza.price();
     $(".size").text(newPizza.size);
     $(".priceOutput").text(newPizza.runningPrice);
-    $("#output").show();
+    $("#output").slideDown();
   })
 })
