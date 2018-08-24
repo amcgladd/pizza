@@ -33,24 +33,26 @@ $(document).ready(function() {
     $(".priceOutput").text(newPizza.runningPrice);
     var picOutput = "";
 
-    newPizza.toppings.forEach(function(element) {
-      if (element === "Pepper") {
-        picOutput += '<img class="output-pic" src="img/pepper.png">';
-      } else if (element === "Mushrooms") {
-        picOutput += '<img class="output-pic" src="img/mushroom.png">';
-      } else if (element === "Onions") {
-        picOutput += '<img class="output-pic" src="img/onion.png">';
-      } else if (element === "Sausage") {
-        picOutput += '<img class="output-pic" src="img/sausage.png">';
-      } else if (element === "Bacon") {
-        picOutput += '<img class="output-pic" src="img/bacon.png">';
-      } else if (element === "Extra Cheese") {
-        picOutput += '<img class="output-pic" src="img/cheese.png">';
-      }
-
-      $(".pic-output").html(picOutput);
-      $("#output").slideDown();
-
-    })
+    if(newPizza.toppings.length < 1) {
+      picOutput = '<h2>no toppings</h2>'
+    } else {
+      newPizza.toppings.forEach(function(element) {
+        if (element === "Pepper") {
+          picOutput += '<img class="output-pic" src="img/pepper.png">';
+        } else if (element === "Mushrooms") {
+          picOutput += '<img class="output-pic" src="img/mushroom.png">';
+        } else if (element === "Onions") {
+          picOutput += '<img class="output-pic" src="img/onion.png">';
+        } else if (element === "Sausage") {
+          picOutput += '<img class="output-pic" src="img/sausage.png">';
+        } else if (element === "Bacon") {
+          picOutput += '<img class="output-pic" src="img/bacon.png">';
+        } else if (element === "Extra Cheese") {
+          picOutput += '<img class="output-pic" src="img/cheese.png">';
+        }
+      });
+    }
+    $(".pic-output").html(picOutput);
+    $("#output").slideDown();
   })
 })
