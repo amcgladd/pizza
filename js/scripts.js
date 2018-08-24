@@ -16,21 +16,9 @@ Pizza.prototype.price = function() {
   return this.runningPrice;
 }
 
-
 Pizza.prototype.cartName = function() {
   return this.size + " - $" + this.runningPrice;
 }
-
-
-// Pizza.prototype.cartName = function() {
-//   if (this.toppings.length > 0) {
-//
-//     return this.size + " pizza with " + this.toppings[0] + " - $" + this.runningPrice;
-//   } else {
-//     return this.size + " pizza - $" + this.runningPrice;
-//   }
-// }
-
 
 //user interface logic
 $(document).ready(function() {
@@ -79,5 +67,4 @@ $(document).ready(function() {
   $(".cart-item").last().click(function() {
     $("#cart-detail").show();
   });
-
 })
