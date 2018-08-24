@@ -8,16 +8,13 @@ body {
 
 .container {
   padding-top: 100px;
-  padding-left: 50px;
+  padding-left: 100px;
+  padding-right: 100px;
 }
 
 #heading {
   padding-bottom: 10px;
 
-}
-
-#heading-text {
-  /* border-bottom: 1px solid var(--primary-color); */
 }
 
 .question-header {
@@ -26,7 +23,6 @@ body {
 
 #output {
   display: none;
-  border-left: 1px solid var(--primary-color);
 }
 
 .form-group > .row {
@@ -53,6 +49,17 @@ label {
   text-align: center;
 }
 
-form {
-  margin-bottom: 20px;
+button {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.output-pic {
+  height: 80px;
+  padding: 20px;
+}
+
+.pic-output-holder {
+  margin: auto 0;
+  width: 100%;
 }

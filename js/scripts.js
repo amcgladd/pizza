@@ -29,8 +29,28 @@ $(document).ready(function() {
 
     var newPizza = new Pizza(inputtedSize, inputtedToppings);
     var finalPrice = newPizza.price();
-    $(".size").text(newPizza.size);
+    $(".sizeOutput").text(newPizza.size.toLowerCase());
     $(".priceOutput").text(newPizza.runningPrice);
-    $("#output").slideDown();
+    var picOutput = "";
+
+    newPizza.toppings.forEach(function(element) {
+      if (element === "Pepper") {
+        picOutput += '<img class="output-pic" src="img/pepper.png">';
+      } else if (element === "Mushrooms") {
+        picOutput += '<img class="output-pic" src="img/mushroom.png">';
+      } else if (element === "Onions") {
+        picOutput += '<img class="output-pic" src="img/onion.png">';
+      } else if (element === "Sausage") {
+        picOutput += '<img class="output-pic" src="img/sausage.png">';
+      } else if (element === "Bacon") {
+        picOutput += '<img class="output-pic" src="img/bacon.png">';
+      } else if (element === "Extra Cheese") {
+        picOutput += '<img class="output-pic" src="img/cheese.png">';
+      }
+
+      $(".pic-output").html(picOutput);
+      $("#output").slideDown();
+
+    })
   })
 })
