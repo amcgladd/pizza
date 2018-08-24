@@ -68,6 +68,6 @@ button {
   text-align: center;
 }
 
-.cart-details {
+#cart-detail {
   display: none;
 }

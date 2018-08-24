@@ -69,14 +69,15 @@ $(document).ready(function() {
       });
     }
 
-    $("ul#pizza-cart").append("<li><span class='cart-item'>" + newPizza.cartName() + "</span></li><div><h6 class='cart-details'>"+ newPizza.toppings +"</h6></div>");
+    $("ul#pizza-cart").append("<li><span class='cart-item'>" + newPizza.cartName() + "</span></li>" +
+    "<span id='cart-detail'>"+ newPizza.toppings + "</span>");
 
     $(".pic-output").html(picOutput);
     $("#output").slideDown();
-
-
-     $(".cart-item").last().click(function() {
-       $(".cart-details").slideToggle();
-     });
   })
+
+  $(".cart-item").last().click(function() {
+    $("#cart-detail").show();
+  });
+
 })
