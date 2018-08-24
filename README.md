@@ -9,7 +9,7 @@
 This application allows users to order a custom pizza and receive a price based on customizations. It makes use of object constructors and prototypes.
 
 ### BDD specs
-* This program will allow users to select a pizza size and receive a price.
+* This program will allow users to select a pizza size and receive a generic price.
   * Example Input: size: small // size: medium // size: large
   * Example Output: $10 // $10 // $10
 

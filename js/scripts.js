@@ -4,22 +4,37 @@ function Pizza(size, toppings) {
   this.toppings = toppings;
 }
 
-Pizza.prototype.addToppings = function() {
-  //push selected toppings to this.toppings
+Pizza.prototype.price = function() {
+    var runningPrice = 10;
+    return runningPrice;
 }
 
-Pizza.protoype.price = function() {
-  var runningPrice = 10;
-  if(this.size === "Medium") {
-    runningPrice += 2;
-  } else if (this.size === "Large") {
-    runningPrice +=4;
-  }
-  if(this.toppings.length > 0) {
-    runningPrice += this.toppings.length;
-  }
-  return runningPrice;
-}
-
+// Pizza.protoype.price = function() {
+//   var runningPrice = 10;
+//   if(this.size === "Medium") {
+//     runningPrice += 2;
+//   } else if (this.size === "Large") {
+//     runningPrice +=4;
+//   }
+//   if(this.toppings.length > 0) {
+//     runningPrice += this.toppings.length;
+//   }
+//   return runningPrice;
+// }
 
 //user interface logic
+$(document).ready(function() {
+  $("#userInput").submit(function(event){
+    event.preventDefault();
+
+    var inputtedSize = $("input:radio[name=sizeRadios]:checked").val();
+    var inputtedToppings = [];
+    $("input:checkbox:checked").each(function(){
+      inputtedToppings.push($(this).val());
+    });
+
+    var newPizza = new Pizza(inputtedSize, inputtedToppings);
+    var finalPrice = newPizza.price();
+    $("#price").text(finalPrice);
+  })
+})
