@@ -9,22 +9,79 @@
   <script src="js/scripts.js"></script>
 </head>
 <body>
-<div class="container">
-  <h1>Pizza Order</h1>
-  <form id="userInput">
-    <div class="form-group">
-      <label for="size">Size:</label>
-      <p id="size">Add Radio Buttons Here</p>
+  <div class="container">
+    <h1>Pizza Order</h1>
+    <form id="userInput">
+      <!--Size Input-->
+      <div class="form-group">
+        <label for="size">Size:</label>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="sizeRadios" id="sizeSmall" value="Small">
+          <label class="form-check-label" for="sizeSmall">
+            Small
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="sizeRadios" id="sizeMedium" value="Medium">
+          <label class="form-check-label" for="sizeMedium">
+            Medium
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="sizeRadios" id="sizeLarge" value="Large">
+          <label class="form-check-label" for="exampleRadios3">
+            Large
+          </label>
+        </div>
+      </div>
+
+      <!--Toppings Input-->
+      <div class="form-group">
+        <label for="toppings">Toppings</label>
+
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="Pepperoni" id="pepperoniTopping">
+          <label class="form-check-label" for="pepperoniTopping">
+            Pepperoni
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="Mushrooms" id="mushroomsTopping">
+          <label class="form-check-label" for="mushroomsTopping">
+            Mushrooms
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="Onions" id="onionsTopping">
+          <label class="form-check-label" for="onionsTopping">
+            Onions
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="Sausage" id="sausageTopping">
+          <label class="form-check-label" for="sausageTopping">
+            Sausage
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="Bacon" id="baconTopping">
+          <label class="form-check-label" for="baconTopping">
+            Bacon
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="Extra Cheese" id="extraCheeseTopping">
+          <label class="form-check-label" for="extraCheeseTopping">
+            Extra Cheese
+          </label>
+        </div>
+      </div>
+
+      <button class="btn btn-primary" type="submit" name="button">Submit</button>
+    </form>
+    <div id="price">
+      <p>Price will appear here</p>
     </div>
-    <div class="form-group">
-      <label for="toppings">Size:</label>
-      <p id="toppings">Add checkboxes Buttons Here</p>
-    </div>
-    <button class="btn btn-primary" type="submit" name="button">Submit</button>
-  </form>
-  <div id="price">
-    <p>Price will appear here</p>
   </div>
-</div>
 </body>
 </html>
