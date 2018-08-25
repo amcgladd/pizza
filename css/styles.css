@@ -21,10 +21,6 @@ body {
   font-size: 20px;
 }
 
-#output {
-  display: none;
-}
-
 .form-group > .row {
    border-left: 1px solid var(--primary-color);
 }
@@ -68,6 +64,6 @@ button {
   text-align: center;
 }
 
-#cart-detail {
+.cart-detail {
   display: none;
 }
