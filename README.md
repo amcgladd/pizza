@@ -1,8 +1,6 @@
-# Pizza Order
+# Pizza Order By AJ MCgladdery
 
-##### Pizza Order form, August 24, 2018
-
-#### By AJ MCgladdery
+##### [View Site Here](https://amcgladd.github.io/pizza/)
 
 ## Description
 
