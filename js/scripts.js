@@ -3,10 +3,10 @@ function Pizza(size, toppings) {
   this.size = size;
   this.toppings = toppings;
   this.runningPrice = 10;
+  this.toppingPics = [];
 }
 
 Pizza.prototype.price = function() {
-  // var runningPrice = 10;
   if (this.size === "Medium") {
     this.runningPrice += 2;
   } else if (this.size === "Large") {
@@ -35,32 +35,32 @@ $(document).ready(function() {
     var finalPrice = newPizza.price();
     $(".sizeOutput").text(newPizza.size.toLowerCase());
     $(".priceOutput").text(newPizza.runningPrice);
-    var picOutput = "";
+
 
     if(newPizza.toppings.length < 1) {
       picOutput = '<h2>no toppings</h2>'
     } else {
       newPizza.toppings.forEach(function(element) {
         if (element === "Pepper") {
-          picOutput += '<img class="output-pic" src="img/pepper.png">';
+          newPizza.toppingPics += '<img class="output-pic" src="img/pepper.png">';
         } else if (element === "Mushrooms") {
-          picOutput += '<img class="output-pic" src="img/mushroom.png">';
+          newPizza.toppingPics += '<img class="output-pic" src="img/mushroom.png">';
         } else if (element === "Onions") {
-          picOutput += '<img class="output-pic" src="img/onion.png">';
+          newPizza.toppingPics += '<img class="output-pic" src="img/onion.png">';
         } else if (element === "Sausage") {
-          picOutput += '<img class="output-pic" src="img/sausage.png">';
+          newPizza.toppingPics += '<img class="output-pic" src="img/sausage.png">';
         } else if (element === "Bacon") {
-          picOutput += '<img class="output-pic" src="img/bacon.png">';
+          newPizza.toppingPics += '<img class="output-pic" src="img/bacon.png">';
         } else if (element === "Extra Cheese") {
-          picOutput += '<img class="output-pic" src="img/cheese.png">';
+          newPizza.toppingPics += '<img class="output-pic" src="img/cheese.png">';
         }
       });
     }
 
     $("ul#pizza-cart").append("<li><span class='cart-item'>" + newPizza.cartName() + "</span>" +
-    "<div><span class='cart-detail'>"+ newPizza.toppings + "</span></div></li>");
+    "<div class='cart-detail'>"+ newPizza.toppingPics + "</div></li>");
 
-    $(".pic-output").html(picOutput);
+    $(".pic-output").html(newPizza.toppingPics);
     $("#output").slideDown();
 
     $("span.cart-item").last().click(function() {
