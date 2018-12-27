@@ -22,8 +22,13 @@ Pizza.prototype.cartName = function() {
 
 //user interface logic
 $(document).ready(function() {
+
+  var totalPrice = 0;
+
   $("#add-button").click(function() {
     event.preventDefault();
+
+
 
     var inputtedSize = $("input:radio[name=sizeRadios]:checked").val();
     var inputtedToppings = [];
@@ -33,12 +38,12 @@ $(document).ready(function() {
 
     var newPizza = new Pizza(inputtedSize, inputtedToppings);
     var finalPrice = newPizza.price();
-    $(".sizeOutput").text(newPizza.size.toLowerCase());
-    $(".priceOutput").text(newPizza.runningPrice);
+    totalPrice += finalPrice;
+
 
 
     if(newPizza.toppings.length < 1) {
-      picOutput = '<h2>no toppings</h2>'
+      newPizza.toppingPics = '<p>no toppings</p>'
     } else {
       newPizza.toppings.forEach(function(element) {
         if (element === "Pepper") {
@@ -57,8 +62,8 @@ $(document).ready(function() {
       });
     }
 
-    $("ul#pizza-cart").append("<li><span class='cart-item'>" + newPizza.cartName() + "</span>" +
-    "<div class='cart-detail'>"+ newPizza.toppingPics + "</div></li>");
+    $("ul#pizza-cart").append("<li><span class='cart-item'>" +                  newPizza.cartName() + "</span>" +
+    "<div class='cart-detail'><div class='toppingPics'>" + newPizza.toppingPics + "</div></div></li>");
 
     $(".pic-output").html(newPizza.toppingPics);
     $("#output").slideDown();
@@ -66,5 +71,12 @@ $(document).ready(function() {
     $("span.cart-item").last().click(function() {
       $(this).next().toggle();
     })
+
+    $("#receiptItems").append("<li><span class='receiptItem'>" + newPizza.cartName() + "</span>" + "<div><p>" + newPizza.toppings + "</p></div></li>");
+
+    $("#receiptTotalPrice").text(totalPrice);
+
   });
+
+
 })

@@ -50,8 +50,8 @@ button {
 }
 
 .output-pic {
-  height: 80px;
-  padding: 20px;
+  height: 30px;
+  margin: 5px;
 }
 
 .pic-output-holder {
@@ -65,9 +65,24 @@ button {
 
 .cart-detail {
   display: none;
+  height: 50px;
 }
+
+.toppingPics {
+  display: flex;
+  flex-direction: row;
+}
+
 
 .cart-item {
   text-decoration: underline;
   color: var(--primary-color);
+}
+
+#checkoutModal {
+  font-family: 'VT323', monospace;
+}
+
+#receiptTotal {
+  float: right;
 }
