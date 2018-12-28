@@ -2,6 +2,9 @@
 
 ##### [View Site Here](https://amcgladd.github.io/pizza/)
 
+![screenshot](https://github.com/amcgladd/pizza/blob/master/img/screenshot.png)
+
+
 ## Description
 
 This application allows users to order a custom pizza and receive a price based on customizations. It makes use of object constructors and prototypes.
